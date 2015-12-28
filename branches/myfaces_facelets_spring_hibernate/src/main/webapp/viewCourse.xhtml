@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE project [     <!ENTITY nbsp "&#160;">  ]>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	template="/WEB-INF/template/default.xhtml">
+	
+<ui:define name="content">
+        <f:view>
+        	<h:form>
+        		<h:inputHidden value="#{courseController.course.id}" />
+        		<h:panelGrid columns="2">
+        			<h:outputLabel for="code" value="Code" />
+        			<h:inputText id="code" value="#{courseController.course.code}" />
+        			
+        			<h:outputLabel for="name" value="Name" />
+        			<h:inputText id="name" value="#{courseController.course.name}" />
+        			
+        		</h:panelGrid>
+        		<h:commandButton value="Update" action="#{courseController.update}" />
+        		<h:commandButton value="Remove" action="#{courseController.remove}" onclick="return confirm('Are you sure?');" />
+        	</h:form>
+        </f:view>
+</ui:define>
+
+</ui:composition>

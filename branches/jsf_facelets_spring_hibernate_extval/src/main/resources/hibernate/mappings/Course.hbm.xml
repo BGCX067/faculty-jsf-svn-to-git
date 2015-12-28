@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.hsn.os.facultyjsf.domain.Course" table="Course">
+		<id name="id" type="java.lang.Long" column="id">
+			<generator class="increment"/>
+		</id>
+		<property name="code" column="code" type="string" />
+		<property name="name" column="name" type="string" />
+	</class>
+</hibernate-mapping>

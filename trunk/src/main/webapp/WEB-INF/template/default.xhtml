@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+    >
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <title><ui:insert name="title"/> - faculty-jsf </title>
+    <link rel="stylesheet" type="text/css" href="#{facesContext.externalContext.requestContextPath}/css/screen.css"/>
+</head>
+<body>
+	<div id="containerDiv" style="width: 50%;border:1px solid #BED6F8;">
+		<div id="headerDiv">
+			<h:outputLink value="/faculty-jsf/editCourse.jsf">
+				<h:outputText value="Create New Course"></h:outputText>
+			</h:outputLink>
+			&nbsp;|&nbsp;
+			<h:outputLink value="/faculty-jsf/listCourses.jsf">
+				<h:outputText value="List Movies"></h:outputText>
+			</h:outputLink>
+		</div>
+	
+		<div id="contentDiv" style="margin-top: 25px;">
+    		<h:messages showDetail="true" />
+    		<ui:insert name="content" />
+    	</div>
+    </div>
+</body>
+</html>

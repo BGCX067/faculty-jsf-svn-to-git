@@ -1,0 +1,10 @@
+#summary This page describes the scenario implemented in this project.
+
+= Introduction =
+
+Initially, application will only implement Course entry and query scenarios.
+
+ * Create a Course
+ * Query the Courses
+ * View the details of a Course
+ * Update a Course

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE project [     <!ENTITY nbsp "&#160;">  ]>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	template="/WEB-INF/template/default.xhtml">
+	
+<ui:define name="content">
+        <f:view>
+        	<h:form>
+            <h:dataTable var="course" value="#{listCourses.courses}" width="75%">
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="Code" />
+					</f:facet>
+					<h:outputLink value="/faculty-jsf/viewCourse.jsf?courseId=#{course.id}">
+						<h:outputText value="#{course.code}" />
+					</h:outputLink>
+				</h:column>
+				
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="Name" />
+					</f:facet>
+					<h:outputText value="#{course.name}"></h:outputText>
+				</h:column>
+				
+			</h:dataTable>
+            </h:form>
+			<a href=".">GO HOME</a>
+        </f:view>
+</ui:define>
+</ui:composition>

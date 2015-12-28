@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.hsn.os</groupId>
+    <artifactId>faculty-jsf</artifactId>
+    <packaging>war</packaging>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>A custom project using myfaces and facelets</name>
+    <url>http://maven.apache.org</url>
+    <build>
+        <finalName>faculty-jsf</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.mortbay.jetty</groupId>
+                <artifactId>maven-jetty-plugin</artifactId>
+                <configuration>
+                    <scanIntervalSeconds>10</scanIntervalSeconds>
+                    <stopPort>9966</stopPort>
+          			<stopKey>foo</stopKey>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.0.2</version>
+                <inherited>true</inherited>
+                <configuration>
+                    <source>1.5</source>
+                    <target>1.5</target>
+                    <encoding>utf-8</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+<!-- Project dependencies -->
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
+            <scope>test</scope>
+        </dependency>
+	<!-- JSF -->
+        <dependency>
+            <groupId>org.apache.myfaces.core</groupId>
+            <artifactId>myfaces-api</artifactId>
+            <version>1.2.5</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.myfaces.core</groupId>
+            <artifactId>myfaces-impl</artifactId>
+            <version>1.2.5</version>
+            <scope>compile</scope>
+        </dependency>
+	<!-- Facelets -->
+        <dependency>
+            <groupId>com.sun.facelets</groupId>
+            <artifactId>jsf-facelets</artifactId>
+            <version>1.1.14</version>
+            <scope>runtime</scope>
+        </dependency>
+	<!-- Hibernate -->
+        <dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>3.3.1.GA</version>
+		</dependency>
+		<dependency>
+	        <groupId>javassist</groupId>
+	        <artifactId>javassist</artifactId>
+	        <version>3.8.0.GA</version>
+	    </dependency>
+	<!-- Spring -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring</artifactId>
+            <version>2.5.6</version>
+        </dependency>
+        <dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>2.5.6</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-context</artifactId>
+		    <version>2.5.6</version>
+		</dependency> 
+	<!-- AspectJ -->
+		<dependency>
+	    	<groupId>aspectj</groupId>
+	    	<artifactId>aspectjweaver</artifactId>
+	    	<version>1.5.4</version>
+		</dependency> 
+	<!-- SLF4J --> 
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.5.5</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.5.5</version>
+		</dependency>
+	<!-- MySQL Connector --> 
+		<dependency>
+		    <groupId>mysql</groupId>
+		    <artifactId>mysql-connector-java</artifactId>
+		    <version>5.1.6</version>
+		</dependency> 
+    </dependencies>
+    
+    <repositories>
+    	<repository>
+    		<id>java-net</id>
+    		<name>java-net-repo</name>
+    		<url>http://download.java.net/maven/1</url>
+  			<layout>legacy</layout>
+    	</repository>
+    	<repository>
+    		<id>jboss</id>
+    		<name>jboss-repo</name>
+    		<url>http://repository.jboss.com/maven2</url>
+  			<layout>legacy</layout>
+    	</repository>
+    </repositories>
+
+    <pluginRepositories>
+		
+        <pluginRepository>
+            <id>codehaus</id>
+            <name>codehaus-repo</name>
+            <snapshots>
+            	<enabled>false</enabled>
+            </snapshots>
+            <url>http://repository.codehaus.org</url>
+        </pluginRepository>
+    </pluginRepositories>
+</project>
